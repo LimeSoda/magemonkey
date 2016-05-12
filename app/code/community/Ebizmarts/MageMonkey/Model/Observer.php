@@ -424,7 +424,7 @@ class Ebizmarts_MageMonkey_Model_Observer
             return $observer;
         }
 
-        $oneStep = Mage::app()->getRequest()->getModuleName() == 'onestepcheckout';
+        $oneStep = Mage::app()->getRequest()->getModuleName() == 'onestepcheckout' || Mage::app()->getRequest()->getModuleName() == "gomage_checkout";
 
         if (Mage::app()->getRequest()->isPost()) {
             $subscribe = Mage::app()->getRequest()->getPost('magemonkey_subscribe');
