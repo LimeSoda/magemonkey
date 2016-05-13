@@ -31,14 +31,14 @@
                     </monkey_subscribe_delete_observer>
                 </observers>
             </newsletter_subscriber_delete_after>
-            <customer_save_after>
+            <!-- customer_save_after>
                 <observers>
                     <monkey_update_customer>
                         <class>monkey/observer</class>
                         <method>updateCustomer</method>
                     </monkey_update_customer>
                 </observers>
-            </customer_save_after>
+            </customer_save_after -->
         </events>
         <models>
             <monkey>
@@ -143,6 +143,14 @@
                     </monkey_subscribe_checkout>
                 </observers>
             </controller_action_predispatch_onestepcheckout_index_index>
+            <controller_action_predispatch_gomage_checkout_onepage_save>
+                <observers>
+                    <monkey_subscribe_checkout>
+                        <class>monkey/observer</class>
+                        <method>registerCheckoutSubscribe</method>
+                    </monkey_subscribe_checkout>
+                </observers>
+            </controller_action_predispatch_gomage_checkout_onepage_save>
             <controller_action_postdispatch_checkout_onepage_saveOrder>
                 <observers>
                     <monkey_subscribe_checkout>
